@@ -19,9 +19,10 @@ async function getProjects(req, res) {
       const data = {
         id: id,
         title: properties["Title"].title[0].text.content,
-        link: properties["Live Link"].url,
-        image: properties["Preview"].files[0].file.url,
-        tech: properties["Technologies"].multi_select,
+        link: properties["Live Link"]?.url,
+        image: properties["Preview"]?.files[0]?.file.url,
+        tech: properties["Technologies"]?.multi_select,
+        note: properties["note"]?.rich_text[0]?.plain_text,
       };
       return data;
     })

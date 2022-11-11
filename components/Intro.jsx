@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { AiFillTwitterCircle, AiOutlineGithub } from "react-icons/ai";
 
@@ -23,27 +24,33 @@ const Intro = () => {
           <p>01</p>
           <p className="mx-3">PROJECTS</p>
         </div>
-        <div
-          className={`flex text-zinc-500 items-center font-bold duration-500 hover:text-zinc-300`}
-        >
-          <p>02</p>
-          <p className="mx-3">BLOGS</p>
-        </div>
+        <Link target={"_blank"} href={"https://tech.snehenduroy.in/"}>
+          <div
+            className={`flex text-zinc-500 items-center font-bold duration-500 hover:text-zinc-300`}
+          >
+            <p>02</p>
+            <p className="mx-3">BLOGS</p>
+          </div>
+        </Link>
         <div className="lg:relative bottom-0 mt-7">
           {/* Twitter */}
-          <div className="inline-block text-xl bg-zinc-600 rounded-full mr-7">
-            <div className="flex items-center my-1">
-              <AiFillTwitterCircle className="mx-1 text-4xl" />
-              <p className="mr-5 mx-3">Twitter</p>
+          <Link target={"_blank"} href={"https://twitter.com/snehendu_roy_"}>
+            <div className="inline-block text-xl bg-zinc-600 rounded-full mr-7">
+              <div className="flex items-center my-1">
+                <AiFillTwitterCircle className="mx-1 text-4xl" />
+                <p className="mr-5 mx-3">Twitter</p>
+              </div>
             </div>
-          </div>
+          </Link>
           {/* Github */}
-          <div className="inline-block text-xl bg-zinc-600 rounded-full mr-5 mt-5">
-            <div className="flex items-center my-1">
-              <AiOutlineGithub className="mx-1 text-4xl" />
-              <p className="mr-5 mx-3">GitHub</p>
+          <Link target={"_blank"} href={"https://github.com/snehendu098/"}>
+            <div className="inline-block text-xl bg-zinc-600 rounded-full mr-5 mt-5">
+              <div className="flex items-center my-1">
+                <AiOutlineGithub className="mx-1 text-4xl" />
+                <p className="mr-5 mx-3">GitHub</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

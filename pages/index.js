@@ -10,9 +10,7 @@ async function fetchData(url) {
 }
 
 export default function Home() {
-  const { data, error } = useSWR("/api/projects", fetchData);
-
-  console.log("data", data);
+  const { data } = useSWR("/api/projects", fetchData);
 
   return (
     <div className="p-5 relative h-screen grid lg:grid-cols-12 grid-cols-1 gap-12 lg:p-10">
@@ -30,7 +28,7 @@ export default function Home() {
         </div>
       </div>
       <div className="lg:col-span-7">
-        <div className="grid lg:grid-cols-2  lg:gap-3 gap-5 lg:place-content-center lg:px-20 pb-20">
+        <div className="lg:grid-cols-2 lg:gap-3 gap-5 lg:place-content-center lg:px-20 pb-20 inline-grid ">
           {data &&
             data?.map((item, index) => (
               <ProjectCard index={index} key={index} item={item} />

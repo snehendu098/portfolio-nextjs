@@ -1,15 +1,14 @@
 import React from "react";
 import { BiLinkExternal } from "react-icons/bi";
-import axios from "axios";
-import Link from "next/link";
 
 const ProjectCard = ({ index, item }) => {
-  const { id, title, image, link, tech } = item;
+  const { id, title, image, link, tech, note } = item;
+  console.log(item);
 
   return (
     <div
-      className={`bg-stone-800 flex flex-col items-center p-5 rounded-lg ${
-        index % 2 !== 0 && "lg:relative lg:top-10"
+      className={`bg-stone-800 inline-flex h-min flex-col items-center relative p-5 rounded-lg ${
+        index % 2 !== 0 && "lg:top-10"
       }`}
     >
       <img src={image} alt="image" className="w-full rounded-lg" />
@@ -27,14 +26,23 @@ const ProjectCard = ({ index, item }) => {
               </p>
             ))}
         </div>
-        <a href={link} target="_blank">
-          <div className="inline-flex mt-5 items-center hover:text-blue-400 duration-300 cursor-pointer">
-            <p className="font-poppins text-semibold text-lg mr-2">Live Link</p>
-            <div className="text-2xl">
-              <BiLinkExternal />
+        {note && (
+          <p className="font-poppins mt-5 font-semibold text-zinc-600">
+            {note}
+          </p>
+        )}
+        {link && (
+          <a href={link} target="_blank">
+            <div className="inline-flex mt-5 items-center hover:text-blue-400 duration-300 cursor-pointer">
+              <p className="font-poppins text-semibold text-lg mr-2">
+                Live Link
+              </p>
+              <div className="text-2xl">
+                <BiLinkExternal />
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        )}
       </div>
     </div>
   );
