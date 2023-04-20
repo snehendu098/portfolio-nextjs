@@ -7,6 +7,7 @@ export const projects = {
     tech: ["React Native", "Expo"],
     desc: "An app which tracks the eyes of a driver and if the driver is feeling drowsy then it rings an alarm so that the driver wakes up and gets aware.",
     note: "The link will download an APK file",
-    inProgress: false
+    inProgress: false,
+    github: "https://github.com/snehendu098/Sleep-Detection"
   },
 }

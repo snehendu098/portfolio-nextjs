@@ -48,10 +48,15 @@ export default function ProjectCardDetails({id, setToggle}) {
 
       }
       <div className="w-full flex flex-wrap mt-4">
+        {el?.github && 
+          <a target="_blank" href={el.github} >
         <AiFillGithub className="text-3xl mr-5 cursor-pointer duration-500 hover:text-yellow-500 font-bold" />
-        {!el.inProgress &&
+        </a>
+        }
+        {!el?.inProgress && el?.link &&
+          <a target="_blank" href={el.link} >
         <FaExternalLinkAlt className="text-3xl cursor-pointer duration-500 hover:text-yellow-500 font-bold" />
-
+        </a>
         }
       </div>
     </div>
