@@ -1,16 +1,28 @@
 import Link from "next/link";
 import React from "react";
 import { AiFillTwitterCircle, AiOutlineGithub } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   return (
-    <div className="relative lg:20 lg:h-[70vh]">
+    <motion.div 
+          initial={{opacity:0}} animate={{opacity: 1}}
+
+
+      className="relative lg:20 lg:h-[70vh]">
       <div className="lg:px-10">
-        <h1>
+        <motion.h1 
+        >
           Hello 👋, I am <br />
-        </h1>
-        <h1>Snehendu Roy</h1>
-        <p className="text-zinc-500 mt-5 font-bold md:mt-14 lg:pr-8">
+        </motion.h1>
+        <h1
+        > 
+
+        Snehendu Roy</h1>
+        <p
+
+
+          className="text-zinc-500 mt-5 font-bold md:mt-14 lg:pr-8">
           Welcome to my <span>personal website</span>. I am just a{" "}
           <span className="text-zinc-300">curious programmer</span> who is{" "}
           <span className="text-zinc-300">interested in Entrepreneurship</span>
@@ -34,7 +46,7 @@ const Intro = () => {
         </Link>
         <div className="lg:relative bottom-0 mt-7">
           {/* Twitter */}
-          <Link target={"_blank"} href={"https://twitter.com/snehendu_roy_"}>
+          <Link target={"_blank"} href={"https://twitter.com/RoyDevelops"}>
             <div className="inline-block text-xl bg-zinc-600 rounded-full mr-7">
               <div className="flex items-center my-1">
                 <AiFillTwitterCircle className="mx-1 text-4xl" />
@@ -53,7 +65,7 @@ const Intro = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
