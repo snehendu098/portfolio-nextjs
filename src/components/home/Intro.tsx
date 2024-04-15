@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { implinks } from "@/app/page";
+import { implinks } from "./Freelance";
 
 const Intro = () => {
   return (

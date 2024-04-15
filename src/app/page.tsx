@@ -1,48 +1,12 @@
 import React from "react";
 
 import { Spotlight } from "@/components/ui/Spotlight";
-import { Database } from "lucide-react";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiNumpy, SiPandas, SiRedux, SiTailwindcss } from "react-icons/si";
-import { FaNodeJs, FaPython, FaReact, FaRobot } from "react-icons/fa6";
-import { DiJavascript, DiMongodb } from "react-icons/di";
-import { MdScatterPlot } from "react-icons/md";
-import { IoIosLink } from "react-icons/io";
-import { GrGraphQl } from "react-icons/gr";
+
 import type { Metadata } from "next";
 
 import Freelance from "@/components/home/Freelance";
 import Knowledge from "@/components/home/Knowledge";
 import Intro from "@/components/home/Intro";
-
-export const implinks = {
-  github: "https://github.com/snehendu098",
-  linkedin: "https://www.linkedin.com/in/snehendu-roy-6ab419218/",
-  fiverr: "https://www.fiverr.com/snehendu?up_rollout=true",
-  twitter: "https://twitter.com/RoyDevelops",
-};
-
-export const knowledge = [
-  { item: <DiJavascript />, name: "JavaScript" },
-  { item: <FaPython />, name: "Python" },
-  // Web
-  { item: <TbBrandNextjs />, name: "Next.Js" },
-  { item: <SiTailwindcss />, name: "Tailwind" },
-  { item: <FaNodeJs />, name: "Node.Js" },
-  { item: <FaReact />, name: "React.Js" },
-  { item: <FaReact />, name: "React Native" },
-  { item: <SiRedux />, name: "Redux" },
-  // Python
-  { item: <SiNumpy />, name: "Numpy" },
-  { item: <SiPandas />, name: "Pandas" },
-  { item: <MdScatterPlot />, name: "Matplotlib" },
-  { item: <IoIosLink />, name: "Langchain" },
-  { item: <FaRobot />, name: "CrewAI" },
-  // database
-  { item: <DiMongodb />, name: "MongoDB" },
-  { item: <GrGraphQl />, name: "GraphQL" },
-  { item: <Database />, name: "SQL" },
-];
 
 export const metadata: Metadata = {
   title: "Snehendu Roy",

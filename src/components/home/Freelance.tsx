@@ -1,7 +1,44 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { implinks as links } from "@/app/page";
+
+import { Database } from "lucide-react";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiNumpy, SiPandas, SiRedux, SiTailwindcss } from "react-icons/si";
+import { FaNodeJs, FaPython, FaReact, FaRobot } from "react-icons/fa6";
+import { DiJavascript, DiMongodb } from "react-icons/di";
+import { MdScatterPlot } from "react-icons/md";
+import { IoIosLink } from "react-icons/io";
+import { GrGraphQl } from "react-icons/gr";
+
+export const implinks = {
+  github: "https://github.com/snehendu098",
+  linkedin: "https://www.linkedin.com/in/snehendu-roy-6ab419218/",
+  fiverr: "https://www.fiverr.com/snehendu?up_rollout=true",
+  twitter: "https://twitter.com/RoyDevelops",
+};
+
+export const knowledge = [
+  { item: <DiJavascript />, name: "JavaScript" },
+  { item: <FaPython />, name: "Python" },
+  // Web
+  { item: <TbBrandNextjs />, name: "Next.Js" },
+  { item: <SiTailwindcss />, name: "Tailwind" },
+  { item: <FaNodeJs />, name: "Node.Js" },
+  { item: <FaReact />, name: "React.Js" },
+  { item: <FaReact />, name: "React Native" },
+  { item: <SiRedux />, name: "Redux" },
+  // Python
+  { item: <SiNumpy />, name: "Numpy" },
+  { item: <SiPandas />, name: "Pandas" },
+  { item: <MdScatterPlot />, name: "Matplotlib" },
+  { item: <IoIosLink />, name: "Langchain" },
+  { item: <FaRobot />, name: "CrewAI" },
+  // database
+  { item: <DiMongodb />, name: "MongoDB" },
+  { item: <GrGraphQl />, name: "GraphQL" },
+  { item: <Database />, name: "SQL" },
+];
 
 const Freelance = () => {
   return (
@@ -19,17 +56,17 @@ const Freelance = () => {
       </p>
       <div className="mt-6 space-x-4">
         <Button asChild>
-          <Link target="_blank" href={links.fiverr}>
+          <Link target="_blank" href={implinks.fiverr}>
             Fiverr Profile
           </Link>
         </Button>
         <Button variant={"outline"}>
-          <Link target="_blank" href={links.linkedin}>
+          <Link target="_blank" href={implinks.linkedin}>
             LinkedIn
           </Link>
         </Button>
         <Button variant={"outline"}>
-          <Link target="_blank" href={links.twitter}>
+          <Link target="_blank" href={implinks.twitter}>
             Twitter
           </Link>
         </Button>

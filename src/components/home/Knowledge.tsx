@@ -1,4 +1,4 @@
-import { knowledge } from "@/app/page";
+import { knowledge } from "./Freelance";
 import React from "react";
 
 const ShowCase = ({
