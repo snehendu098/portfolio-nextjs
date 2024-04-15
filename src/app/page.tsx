@@ -1,25 +1,16 @@
 import React from "react";
 
 import { Spotlight } from "@/components/ui/Spotlight";
-import { Database, LinkedinIcon } from "lucide-react";
-import { PiGithubLogoBold } from "react-icons/pi";
-import { BsTwitter } from "react-icons/bs";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Database } from "lucide-react";
 import { TbBrandNextjs } from "react-icons/tb";
-import {
-  SiChainlink,
-  SiNumpy,
-  SiPandas,
-  SiRedux,
-  SiTailwindcss,
-} from "react-icons/si";
+import { SiNumpy, SiPandas, SiRedux, SiTailwindcss } from "react-icons/si";
 import { FaNodeJs, FaPython, FaReact, FaRobot } from "react-icons/fa6";
-import { DiJavascript, DiMongodb, DiSqllite } from "react-icons/di";
+import { DiJavascript, DiMongodb } from "react-icons/di";
 import { MdScatterPlot } from "react-icons/md";
 import { IoIosLink } from "react-icons/io";
 import { GrGraphQl } from "react-icons/gr";
-import Link from "next/link";
+import type { Metadata } from "next";
+
 import Freelance from "@/components/home/Freelance";
 import Knowledge from "@/components/home/Knowledge";
 import Intro from "@/components/home/Intro";
@@ -52,6 +43,11 @@ export const knowledge = [
   { item: <GrGraphQl />, name: "GraphQL" },
   { item: <Database />, name: "SQL" },
 ];
+
+export const metadata: Metadata = {
+  title: "Snehendu Roy",
+  description: "A programmer with entrepreneurial Goals",
+};
 
 export default function Home() {
   return (
