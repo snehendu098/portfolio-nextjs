@@ -1,22 +1,61 @@
 import React from "react";
 
 import { Spotlight } from "@/components/ui/Spotlight";
-import { LinkedinIcon } from "lucide-react";
+import { Database, LinkedinIcon } from "lucide-react";
 import { PiGithubLogoBold } from "react-icons/pi";
 import { BsTwitter } from "react-icons/bs";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
+import {
+  SiChainlink,
+  SiNumpy,
+  SiPandas,
+  SiRedux,
+  SiTailwindcss,
+} from "react-icons/si";
+import { FaNodeJs, FaPython, FaReact, FaRobot } from "react-icons/fa6";
+import { DiJavascript, DiMongodb, DiSqllite } from "react-icons/di";
+import { MdScatterPlot } from "react-icons/md";
+import { IoIosLink } from "react-icons/io";
+import { GrGraphQl } from "react-icons/gr";
+import Link from "next/link";
+import Freelance from "@/components/home/Freelance";
+import Knowledge from "@/components/home/Knowledge";
+import Intro from "@/components/home/Intro";
 
-const knowledge = [
-  { item: <TbBrandNextjs />, name: "Next Js" },
-  { item: <SiTailwindcss />, name: "Tailwind CSS" },
+export const implinks = {
+  github: "https://github.com/snehendu098",
+  linkedin: "https://www.linkedin.com/in/snehendu-roy-6ab419218/",
+  fiverr: "https://www.fiverr.com/snehendu?up_rollout=true",
+  twitter: "https://twitter.com/RoyDevelops",
+};
+
+export const knowledge = [
+  { item: <DiJavascript />, name: "JavaScript" },
+  { item: <FaPython />, name: "Python" },
+  // Web
+  { item: <TbBrandNextjs />, name: "Next.Js" },
+  { item: <SiTailwindcss />, name: "Tailwind" },
+  { item: <FaNodeJs />, name: "Node.Js" },
+  { item: <FaReact />, name: "React.Js" },
+  { item: <FaReact />, name: "React Native" },
+  { item: <SiRedux />, name: "Redux" },
+  // Python
+  { item: <SiNumpy />, name: "Numpy" },
+  { item: <SiPandas />, name: "Pandas" },
+  { item: <MdScatterPlot />, name: "Matplotlib" },
+  { item: <IoIosLink />, name: "Langchain" },
+  { item: <FaRobot />, name: "CrewAI" },
+  // database
+  { item: <DiMongodb />, name: "MongoDB" },
+  { item: <GrGraphQl />, name: "GraphQL" },
+  { item: <Database />, name: "SQL" },
 ];
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col items-center w-full pb-24 px-6 md:px-0">
+    <main className="flex h-screen flex-col items-center w-full px-6 md:px-0">
       <div className="h-screen w-screen flex md:items-center md:justify-center fixed overflow-hidden">
         <div className="w-full bg-dot-white/[0.2] h-full relative flex items-center justify-center">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
@@ -26,10 +65,10 @@ export default function Home() {
           />
         </div>
       </div>
-      {/* min */}
-      <div className="z-40 w-full max-w-2xl pt-10">
+      {/* main */}
+      <div className="z-40 w-full pb-20 max-w-2xl pt-10">
         {/* head */}
-        <div className="flex fixed top-10 space-x-6">
+        <div className="flex space-x-6">
           <img
             className="inline-block h-10 w-10 rounded-full"
             src="/roy.jpg"
@@ -41,41 +80,16 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className="w-full flex flex-col mt-24">
+        <div className="w-full flex flex-col mt-16">
           {/* intro and some text */}
-          <p className="text-lg text-white/70">
-            I'm a programmer with a passion for turning complex problems into
-            elegant solutions. I specialize in full-stack{" "}
-            <span className="text-blue-500  font-semibold">
-              Fullstack Web Developement, App developement
-            </span>{" "}
-            and even a sprinkle of{" "}
-            <span className="text-blue-500 font-semibold ">Generative AI</span>.
-            Let's build something awesome together.
-          </p>
-          <div className="mt-10 w-full flex space-x-6">
-            <Button>See Projects</Button>
-            <Button variant={"outline"}>Contact Me</Button>
-          </div>
+          <Intro />
 
           {/* skills showcase */}
 
-          <p className="lg:text-4xl text-2xl font-bold mt-14">
-            Knowledge Stack
-          </p>
-          <div className="w-full flex space-x-4">
-            {knowledge.map(
-              (e: { item: React.JSX.Element; name: String }, i: number) => (
-                <div
-                  key={i}
-                  className="p-2 mt-4 flex rounded-lg items-center justify-center px-6 text-lg text-white bg-gray-200/10 shadow-slate-900 shadow-lg"
-                >
-                  <div className="text-2xl mr-2">{e.item}</div>
-                  <p>{e.name}</p>
-                </div>
-              )
-            )}
-          </div>
+          <Knowledge />
+
+          {/* freelance */}
+          <Freelance />
         </div>
       </div>
     </main>
