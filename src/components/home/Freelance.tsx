@@ -54,18 +54,18 @@ const Freelance = () => {
         <br />
         Have an idea? <span className="text-blue-500">Let's Discuss</span>
       </p>
-      <div className="mt-6 space-x-4">
-        <Button asChild>
+      <div className="mt-6">
+        <Button className="mr-4" asChild>
           <Link target="_blank" href={implinks.fiverr}>
             Fiverr Profile
           </Link>
         </Button>
-        <Button variant={"outline"}>
+        <Button className="mr-4" variant={"outline"}>
           <Link target="_blank" href={implinks.linkedin}>
             LinkedIn
           </Link>
         </Button>
-        <Button variant={"outline"}>
+        <Button className="mr-4" variant={"outline"}>
           <Link target="_blank" href={implinks.twitter}>
             Twitter
           </Link>
